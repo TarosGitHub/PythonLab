@@ -9,3 +9,6 @@ numpy = "*"
 [dev-packages]
 
 [requires]
+
+[scripts]
+start = "python study_numpy.py"
