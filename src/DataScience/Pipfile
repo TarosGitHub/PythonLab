@@ -13,4 +13,5 @@ ipython = "*"
 [requires]
 
 [scripts]
-start = "python study_numpy.py"
+startnp = "python study_numpy.py"
+startpd = "python study_pandas.py"
