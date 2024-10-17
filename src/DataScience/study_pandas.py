@@ -18,6 +18,30 @@ population = pd.Series(population_dict)
 population.values
 population.index
 
+### Access
+
+data = pd.Series(["a", "b", "c"], index=[1, 3, 5])
+
+data.loc[1]
+"""
+'a'
+"""
+data.loc[1:3]
+"""
+1 a
+3 b
+"""
+
+data.iloc[1]
+"""
+'b'
+"""
+data.iloc[1:3]
+"""
+3 b
+5 c
+"""
+
 ## DataFrame
 
 area_dict = {"California": 423967,
@@ -37,6 +61,25 @@ pd.DataFrame(data)
 states.values
 states.index
 states.columns
+
+### Transpose (Swap rows and columns)
+
+states.T
+
+### Access
+
+states["area"] # Returns one column
+"""
+California 423967
+Texas      695662
+New York   141297
+Florida    170312
+"""
+
+states.loc[1, 1]
+states.loc[:"New York", :"population"]
+
+states.iloc[1, 1]
 
 if __name__ == "__main__":
     print(pd.__version__)
