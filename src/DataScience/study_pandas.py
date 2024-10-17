@@ -187,5 +187,20 @@ Texas      2000    20851820
            2010    25145561
 """
 
+### Merge
+
+df1 = pd.DataFrame({"employee": ["Bob", "Jake", "Lisa", "Sue"],
+                    "group": ["Accounting", "Engineering", "Engineering", "HR"]})
+df2 = pd.DataFrame({"employee": ["Lisa", "Bob", "Jake", "Sue"],
+                    "hire_date": [2004, 2008, 2012, 2014]})
+
+df3 = pd.merge(df1, df2)
+
+df4 = pd.DataFrame({"group": ["Accounting", "Engineering", "HR"],
+                    "supervisor": ["Carly", "Guido", "Steve"]})
+
+df5 = pd.DataFrame({"group": ["Accounting", "Accounting", "Engineering", "Engineering", "HR", "HR"],
+                    "skills": ["math", "spreadsheets", "coding", "linux", "spreadsheets", "organization"]})
+
 if __name__ == "__main__":
     print(pd.__version__)
