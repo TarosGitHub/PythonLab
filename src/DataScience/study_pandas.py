@@ -76,7 +76,7 @@ New York   141297
 Florida    170312
 """
 
-states.loc[1, 1]
+states.loc["California", "area"]
 states.loc[:"New York", :"population"]
 
 states.iloc[1, 1]
