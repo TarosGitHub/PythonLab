@@ -202,5 +202,14 @@ df4 = pd.DataFrame({"group": ["Accounting", "Engineering", "HR"],
 df5 = pd.DataFrame({"group": ["Accounting", "Accounting", "Engineering", "Engineering", "HR", "HR"],
                     "skills": ["math", "spreadsheets", "coding", "linux", "spreadsheets", "organization"]})
 
+## Vectorizing strings
+
+monte = pd.Series(["Graham Chapman",
+                   "John Cleese",
+                   "Terry Gilliam",
+                   "Eric Idle",
+                   "Terry Jones",
+                   "Michael Palin"])
+
 if __name__ == "__main__":
     print(pd.__version__)
